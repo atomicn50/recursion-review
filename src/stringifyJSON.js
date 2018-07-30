@@ -44,16 +44,16 @@ var stringifyJSON = function(obj) {
 
     for (var key in obj) {
 
-      if (typeof obj[key] !== 'function' && typeof obj[key] !== "undefined") {
+      if (typeof obj[key] !== 'function' && typeof obj[key] !== 'undefined') {
   
-      result += stringifyJSON(key) + ':' + stringifyJSON(obj[key]);
+        result += stringifyJSON(key) + ':' + stringifyJSON(obj[key]);
 
-      if (key !== lastKey) {
-      result += ',';
+        if (key !== lastKey) {
+          result += ',';
+        }
       }
-    }
 
-}
+    }
     return result + '}';
   }
 
